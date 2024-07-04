@@ -3,6 +3,6 @@
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
    <Button
-      text="Beispieltext unten"
+      text="Beispieltext oben"
       press=".onShowText"/>
 </mvc:View>
