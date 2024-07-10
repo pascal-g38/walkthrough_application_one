@@ -1,1 +1,1 @@
-{"name":"walkthrough_application_one","version":"0.0.1","description":"Anwendung für den UI5-Walkthrough","scripts":{"start":"ui5 serve -o index.html"},"devDependencies":{"@ui5/cli":"^3.11.0"}}
+{"name":"walkthrough_application_one","version":"0.0.1","description":"Anwendung für den UI5-Walkthrough","scripts":{"start":"ui5 serve -o test/mockServer.html"},"devDependencies":{"@ui5/cli":"^3.11.0","ui5-middleware-simpleproxy":"^3.2.16"}}
