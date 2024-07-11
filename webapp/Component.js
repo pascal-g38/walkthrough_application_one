@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/model/json/JSONModel",
-	"sap/ui/model/resource/ResourceModel"
-], (UIComponent, JSONModel, ResourceModel) => {
+	"sap/ui/model/resource/ResourceModel",
+	"sap/ui/Device"
+], (UIComponent, JSONModel, ResourceModel, Device) => {
 	"use strict";
 
 	return UIComponent.extend("ui5.walkthrough.Component", {
@@ -12,10 +13,8 @@ sap.ui.define([
          },
 
 		init() {
-			// call the init function of the parent
 			UIComponent.prototype.init.apply(this, arguments);
 
-			// set data model on view
 			const oData = {
 				recipient: {
 					name: "World"
@@ -24,10 +23,12 @@ sap.ui.define([
 			const oModel = new JSONModel(oData);
 			this.setModel(oModel);
 
-			// create the views based on the url/hash
+			const oDeviceModel = new JSONModel(Device);
+			oDeviceModel.setDefaultBindingMode("OneWay");
+			this.setModel(oDeviceModel, "device");
+
 			this.getRouter().initialize();
 
-			// set i18n model on view
 			const i18nModel = new ResourceModel({
 				bundleName: "ui5.walkthrough.i18n.i18n"
 			});
