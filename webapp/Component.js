@@ -33,6 +33,10 @@ sap.ui.define([
 				bundleName: "ui5.walkthrough.i18n.i18n"
 			});
 			this.setModel(i18nModel, "i18n");
-		}
+		},
+
+		getContentDensityClass() {
+			return Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact";
+		}		
 	});
 });
