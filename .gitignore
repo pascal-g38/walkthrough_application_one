@@ -1,2 +1,5 @@
 # Ignoriere das Verzeichnis "node_modules"
 node_modules/
+
+# Ignoriere das Verzeichnis "dist"
+/dist/*
